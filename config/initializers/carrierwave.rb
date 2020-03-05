@@ -11,6 +11,7 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory = 'rails-photo-0'
+    config.asset_host = 'https://s3.amazonaws.com/rails-photo-0'
     config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
     config.cache_storage = :fog
   end
