@@ -12,6 +12,11 @@
   </head>
 
   <body>
+    <script>
+      $(function() {
+        setTimeout("$('.alert').fadeOut('slow')", 2000);
+      });
+    </script>
     <div id="wrapper">
       <%= render 'partial/navbar' if current_user %>
 
