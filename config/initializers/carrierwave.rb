@@ -2,6 +2,7 @@
 
 unless Rails.env.development? || Rails.env.test?
   CarrierWave.configure do |config|
+    config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider: 'AWS',
       aws_access_key_id: ENV['AWS_ACCESS_KEY'],
@@ -10,6 +11,7 @@ unless Rails.env.development? || Rails.env.test?
     }
 
     config.fog_directory = 'rails-photo-0'
+    config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
     config.cache_storage = :fog
   end
 end

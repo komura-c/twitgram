@@ -77,6 +77,6 @@ gem 'mini_magick'
 
 gem 'pg', group: :production
 
-gem 'fog'
+gem 'fog-aws'
 
 gem 'dotenv-rails'
