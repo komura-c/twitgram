@@ -18,7 +18,7 @@
       });
     </script>
     <div id="wrapper">
-      <%= render 'partial/navbar' if current_user %>
+      <%= render 'partial/navbar' %>
 
       <% if flash[:notice] %>
         <div class="alert alert-info text-center"><%= flash[:notice] %></div>
