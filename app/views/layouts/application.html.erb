@@ -14,17 +14,17 @@
   <body>
     <script>
       $(function() {
-        setTimeout("$('.alert').fadeOut('slow')", 2000);
+        setTimeout("$('.alert').fadeOut('slow')", 3000);
       });
     </script>
     <div id="wrapper">
       <%= render 'partial/navbar' if current_user %>
 
       <% if flash[:notice] %>
-        <div class="alert alert-info"><%= flash[:notice] %></div>
+        <div class="alert alert-info text-center"><%= flash[:notice] %></div>
       <% end %>
       <% if flash[:alert] %>
-        <div class="alert alert-danger"><%= flash[:alert] %></div>
+        <div class="alert alert-danger text-center"><%= flash[:alert] %></div>
       <% end %>
       
       <div class="container">
