@@ -9,10 +9,7 @@ unless Rails.env.development? || Rails.env.test?
       aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
       region: 'ap-northeast-1'
     }
-
     config.fog_directory = 'rails-photo-0'
-    config.asset_host = 'https://s3.amazonaws.com/rails-photo-0'
-    config.fog_attributes = { cache_control: "public, max-age=#{365.days.to_i}" }
-    config.cache_storage = :fog
+    config.storage = :fog
   end
 end
