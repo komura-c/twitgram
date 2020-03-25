@@ -80,3 +80,5 @@ gem 'pg', group: :production
 gem 'fog-aws'
 
 gem 'dotenv-rails'
+
+gem 'actionview', '>= 5.2.4.2'
